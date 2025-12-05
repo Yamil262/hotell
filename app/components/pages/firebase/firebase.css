@@ -1,0 +1,70 @@
+h2 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.tabla-api {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background:#33CC99;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+.tabla-api th {
+  background-color:#006633 ; /* verdesito rro */
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.tabla-api td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-api tr:hover {
+  background-color: #f0f0f0;
+  transition: 0.3s;
+}
+
+/* Ocupadito / Librito */
+.ocupada {
+  color: green;
+  font-weight: bold;
+}
+
+.libre {
+  color: red;
+  font-weight: bold;
+}
+
+/* Modo oscuro */
+body.dark-mode .tabla-api {
+  background: #1f1f1f;
+  box-shadow: none;
+}
+
+body.dark-mode .tabla-api th {
+  background-color: #cda05a; /* dorado */
+  color: black;
+}
+
+body.dark-mode .tabla-api td {
+  border-bottom: 1px solid #444;
+  color: white;
+}
+
+body.dark-mode .tabla-api tr:hover {
+  background-color: #333;
+}
+
+body.dark-mode .ocupada {
+  color: #8be28b;
+}
+
+body.dark-mode .libre {
+  color: #ff6b6b;
+}

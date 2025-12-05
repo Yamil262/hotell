@@ -1,0 +1,52 @@
+/* Estilo del botón */
+.theme-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+/* Contenedor del menú */
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .theme-btn {
+  background-color: #eee;
+  color: #000;
+}
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* evita scroll raro en teléfono */
+}
+
+/* Contenedores generales */
+.container {
+  padding: 10px;
+  margin: auto;
+}
+
+/* Menú responsivo */
+@media (max-width: 700px) {
+  .menu-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-container a {
+    font-size: 16px;
+  }
+}

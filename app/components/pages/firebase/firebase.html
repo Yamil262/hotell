@@ -1,0 +1,45 @@
+<app-header></app-header>
+<app-menu></app-menu>
+
+<h2>Lista de Habitaciones</h2>
+
+<p *ngIf="dataFirebase.length === 0">Cargando datos...</p>
+
+<table class="tabla-api" *ngIf="dataFirebase.length > 0">
+  <thead>
+    <tr>
+      <th>Número</th>
+      <th>Tipo</th>
+      <th>Ocupada</th>
+      <th>Huéspedes</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let hab of dataFirebase">
+      
+      <td>{{ hab.numero }}</td>
+
+      <td>{{ hab.tipo }}</td>
+
+      <td>
+        <span [class.ocupada]="hab.ocupada" [class.libre]="!hab.ocupada">
+          {{ hab.ocupada ? 'Sí' : 'No' }}
+        </span>
+      </td>
+
+      <td>
+        <ul *ngIf="hab.huespedes; else sinHuespedes">
+          <li *ngFor="let h of hab.huespedes">{{ h }}</li>
+        </ul>
+
+        <ng-template #sinHuespedes>
+          <em>Sin huéspedes</em>
+        </ng-template>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<app-footer></app-footer>
